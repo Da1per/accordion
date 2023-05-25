@@ -1,0 +1,47 @@
+html{
+    font-family: 'Mulish';
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #E1E1E1;
+}
+.header_logo{
+    display: block;
+    height: calc(30px + 1vw);
+    width: calc(30px + 1vw);
+    background: #E2E2EA;
+    border-radius: 20%;
+}
+.header_left{
+    display: flex;
+}
+.header_right{
+    width: 20%;
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+}
+.header_user{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+}
+.main{
+    display: flex;
+}
+.main_section_left{
+    width: 5%;
+    border-right:1px solid #E1E1E1;
+}
+.header_avatar{
+    background-color: #C4C4C4;
+    height: calc(30px + 1vw);
+    width: calc(30px + 1vw);
+    border-radius: 50%;
+}
+.header_user_panel_post{
+    color: #9A9AB0;;
+}
