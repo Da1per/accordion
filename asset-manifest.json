@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/accordion/static/css/main.073c9b0a.css",
+    "main.js": "/accordion/static/js/main.a4ecded6.js",
+    "static/js/787.b22e33ef.chunk.js": "/accordion/static/js/787.b22e33ef.chunk.js",
+    "static/media/logo.svg": "/accordion/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/accordion/index.html",
+    "main.073c9b0a.css.map": "/accordion/static/css/main.073c9b0a.css.map",
+    "main.a4ecded6.js.map": "/accordion/static/js/main.a4ecded6.js.map",
+    "787.b22e33ef.chunk.js.map": "/accordion/static/js/787.b22e33ef.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.a4ecded6.js"
+  ]
+}
