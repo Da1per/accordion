@@ -6,13 +6,28 @@ function Task() {
     const [openTab2,setOpenTab2]=useState(false)
     const [openTab3,setOpenTab3]=useState(false)
     const [sus,setSus]=useState({
-        id:[],
         status:''    
 })
+    const [atWork,setAtwork]=useState([])
+    const [pause,setPause]= useState([])
+    const [def,setDef]=useState([])
     const onTabs=(sus1,i)=>{
-        console.log([...[i]].push(i))
+    
+        switch (sus1) {
+            case 'В работе':
+
+                setAtwork([...atWork.sort().filter(q=>q!==i),i])
+                // code
+                break;
+            case 'На паузе':
+                setAtwork([...atWork.sort().filter(q=>q!==i)])
+                setPause([...pause.sort().filter(q=>q!==i),i])
+                break
+            default:
+                // code
+        }
+        console.log(atWork)
         setSus({
-            id:i,
             status:sus1
         })
     }
@@ -24,7 +39,7 @@ function Task() {
     for(let i=0;i<12;i++){
         task1.push(
             <div>
-                <ul id={i} className={((sus.status=='В работе'&&sus.id==i))?'task_body_tab1_task at_work_ul':'task_body_tab1_task'}>
+                <ul id={i} className={(atWork.find(j=>j==i)===i)?'task_body_tab1_task at_work_ul':'task_body_tab1_task'}>
                     <li className='task_body_header_tab1'>
                         01.01.0001
                     </li>
@@ -39,7 +54,7 @@ function Task() {
                         Прозвонить Копьева
                     </li>
                     <li className='task_body_header_tab5'>
-                       <select id={"value"+i} className={((document.getElementById("value"+i))=='В работе'&&sus.id==i)?'task_body_header_tab5_select at_work_li':((sus.status=='На паузе'&&sus.id==i)?'task_body_header_tab5_select  pause':'task_body_header_tab5_select')} onChange={e => {onTabs(e.target.value,i)}} >
+                       <select id={"value"+i} className={(atWork.find(j=>j==i)===i)?"task_body_header_tab5_select at_work_li":((pause.find(j=>j===i)===i)?'task_body_header_tab5_select pause':"task_body_header_tab5_select")} onChange={e => {onTabs(e.target.value,i)}} >
                             <option>Выполнено</option>
                             <option>На паузе</option>
                             <option>В работе</option>
@@ -73,7 +88,7 @@ function Task() {
             </div>
         )
   
-
+console.log(atWork[i],i)
     
    }
     const openTask1=()=>{
